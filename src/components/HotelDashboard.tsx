@@ -92,7 +92,12 @@ const HotelDashboard = () => {
       notes: guestInfo.notes,
     };
 
-    setOrders(prev => [newOrder, ...prev]);
+    const updatedOrders = [newOrder, ...orders];
+    setOrders(updatedOrders);
+    
+    // Save to localStorage for kitchen system sync
+    localStorage.setItem('hotelOrders', JSON.stringify(updatedOrders));
+    
     setCart([]);
   };
 
@@ -126,8 +131,8 @@ const HotelDashboard = () => {
                 <Button variant="gold" size="lg" className="shadow-glow">
                   View Menu
                 </Button>
-                <Button variant="luxury" size="lg">
-                  Book a Table
+                <Button variant="luxury" size="lg" onClick={() => window.open('/kitchen', '_blank')}>
+                  Kitchen Dashboard
                 </Button>
               </div>
             </div>

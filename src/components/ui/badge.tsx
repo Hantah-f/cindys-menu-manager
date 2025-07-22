@@ -15,6 +15,9 @@ const badgeVariants = cva(
         gold: "border-transparent bg-gradient-gold text-primary-foreground hover:shadow-glow font-bold",
         success: "border-transparent bg-hotel-success text-white hover:bg-hotel-success/80",
         warning: "border-transparent bg-hotel-warning text-white hover:bg-hotel-warning/80",
+        "hotel-warning": "border-transparent bg-hotel-warning text-white hover:bg-hotel-warning/80",
+        "hotel-info": "border-transparent bg-hotel-info text-white hover:bg-hotel-info/80",
+        "hotel-success": "border-transparent bg-hotel-success text-white hover:bg-hotel-success/80",
       },
     },
     defaultVariants: {
