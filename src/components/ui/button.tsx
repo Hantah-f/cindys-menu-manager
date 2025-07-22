@@ -5,19 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-card",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-card",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-card",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        gold: "bg-gradient-gold text-primary-foreground hover:shadow-glow hover:scale-105 transition-bounce shadow-luxury font-semibold",
+        luxury: "bg-hotel-navy text-hotel-cream hover:bg-hotel-navy/90 shadow-luxury border border-hotel-gold/20",
+        success: "bg-hotel-success text-white hover:bg-hotel-success/90 shadow-card",
+        warning: "bg-hotel-warning text-white hover:bg-hotel-warning/90 shadow-card",
+        menu: "bg-background border border-border hover:bg-accent hover:text-accent-foreground hover:border-primary/50 transition-smooth",
       },
       size: {
         default: "h-10 px-4 py-2",
